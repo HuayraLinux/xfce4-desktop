@@ -1,0 +1,18 @@
+display: check for XResQueryClientIds to enable XRes extension.
+
+To work depends on libXRes 1.2.0, but berfore check XResQueryClients that seems
+that exists on libXRess 1.0.7, however it cannot be compiled because the code
+depends on other definitions.
+Index: xfwm4-4.16.1/configure.ac
+===================================================================
+--- xfwm4-4.16.1.orig/configure.ac
++++ xfwm4-4.16.1/configure.ac
+@@ -121,7 +121,7 @@ dnl Check for Xi2 library
+ fi
+ 
+ dnl Check for XRes library
+-AC_CHECK_LIB([XRes], [XResQueryClients],
++AC_CHECK_LIB([XRes], [XResQueryClientIds],
+   [
+     if ! echo $LIBX11_LIBS | grep -q -- '-lXRes'; then
+       LIBX11_LIBS="$LIBX11_LIBS -lXRes"
