@@ -1,0 +1,14 @@
+Description: Upstream configure options allow for autostart or dbus, not both.
+Author: Unit 193 <unit193@debian.org>
+Forwarded: no
+
+--- xfce4-notifyd-0.6.2.orig/Makefile.am
++++ xfce4-notifyd-0.6.2/Makefile.am
+@@ -101,7 +101,6 @@ systemd_userdir = $(prefix)/lib/systemd/
+ systemd_user_DATA = $(systemd_user_in_files:.service.in=.service)
+ 
+ distclean_service = $(service_DATA) $(systemd_user_DATA)
+-else
+ autostartdir = $(sysconfdir)/xdg/autostart
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ 
