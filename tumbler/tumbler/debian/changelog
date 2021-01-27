@@ -1,0 +1,354 @@
+tumbler (4.16.0-1~huayra4+1) torbellino; urgency=medium
+
+  * Rebuild for Huayra 4.
+
+ -- Matias De lellis <mati86dl@gmail.com>  Tue, 26 Jan 2021 18:49:10 -0300
+
+tumbler (4.16.0-1) unstable; urgency=medium
+
+  * New upstream version 4.16.0
+  * d/control: version xfce4-dev-tools b-dep for 4.16
+  * Upload to unstable
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 23 Dec 2020 15:09:57 +0100
+
+tumbler (0.3.1-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.3.1.
+  * d/control: Add libgepub-0.6-dev to Build-Depend for epub support.
+  * d/rules: Drop dh_autoreconf override, no longer needed.
+  * d/libtumbler-1-0.symbols: Set Build-Depends-Package.
+  * d/tumbler-common.install: Install new icon.
+  * d/tumbler-plugins-extra.install: Install new epub plugin.
+  * Update Standards-Version to 4.5.1.
+
+ -- Unit 193 <unit193@debian.org>  Fri, 20 Nov 2020 00:49:33 -0500
+
+tumbler (0.3.0-1) experimental; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + libtumbler-1-0, libtumbler-1-dev,
+    tumbler-plugins-extra: Add Multi-Arch: same.+ tumbler-common: Add
+    Multi-Arch: foreign.
+
+  [ Yves-Alexis Perez ]
+  * New upstream version 0.3.0
+  * d/watch: update to version 4
+  * d/control: also mark tumbler as ma:same
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 14 Nov 2020 18:01:23 +0100
+
+tumbler (0.2.8-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Name (from ./configure), Repository.
+
+  [ Yves-Alexis Perez ]
+  * d/control: replace build-dep libgtk2-dev by libgdk-pixbuf2.0-dev
+    (closes: #959087)
+  * d/control: update standards version to 4.5.0
+  * d/rules: drop --as-needed from linker flags
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 30 Apr 2020 09:00:38 +0200
+
+tumbler (0.2.8-1) unstable; urgency=medium
+
+  [ Unit 193 ]
+  * d/watch: Update for upstream's move to mirrorbit.
+  * New upstream version 0.2.8.
+    - Drop patches applied upstream.
+  * d/control:
+    - Bump dh compat to 12.
+    - Update 'homepage' field.
+    - Set R³ to no.
+  * Update Standards-Version to 4.4.1.
+
+  [ Yves-Alexis Perez ]
+  * d/watch: use uscan special strings
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 31 Dec 2019 17:13:08 +0100
+
+tumbler (0.2.7-2) unstable; urgency=medium
+
+  * d/patches: prepend XDG_DATA_HOME to thumbnailers dirs
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 21 Aug 2019 22:07:43 +0200
+
+tumbler (0.2.7-1) unstable; urgency=medium
+
+  * New upstream version 0.2.7
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 15 Aug 2019 17:01:41 +0200
+
+tumbler (0.2.4-1) unstable; urgency=medium
+
+  [ Mateusz Łukasik ]
+  * New upstream version 0.2.4.
+
+  [ Unit 193 ]
+  * d/compat, d/control:
+    - Drop d/compat in favor of debhelper-compat, bump to 11.
+  * d/rules:
+    - Drop the now-default option '--disable-silent-rules'.
+    - Drop dbgsym migration, it is complete.
+  * Update Standards-Version to 4.4.0.
+
+  [ Yves-Alexis Perez ]
+  * update symbols file for new release
+  * d/control: update tumbler-common long description
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 13 Jul 2019 14:23:13 +0200
+
+tumbler (0.2.3-1) unstable; urgency=medium
+
+  * New upstream version 0.2.2
+  * d/control: drop Lionel from Uploaders, thanks!
+  * New upstream version 0.2.3
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 14 Sep 2018 13:57:39 +0200
+
+tumbler (0.2.1-1) unstable; urgency=medium
+
+  [ Yves-Alexis Perez ]
+  * add patch to use multithreading (closes: #483040)
+  * add a d/gbp.conf configuration file
+
+  [ Unit 193 ]
+  * New upstream version 0.2.1
+  * Update Standards-Version to 4.1.4.
+  * d/changelog: Remove trailing whitespace from previous entry.
+  * d/control, d/copyright, d/watch: Use https where possible.
+  * d/control: Move libtumbler-1-0 to section 'libs'.
+  * d/rules: Replace the override on dh_install with dh_missing.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 07 Apr 2018 15:57:21 +0200
+
+tumbler (0.2.0-2) unstable; urgency=medium
+
+  * Moved the package to git on salsa.debian.org
+  * Updated the maintainer address to debian-xfce@lists.debian.org
+  * d/compat bumped to 10
+  * run xdt-autogen when running autoreconf
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 23 Mar 2018 12:08:54 +0100
+
+tumbler (0.2.0-1) experimental; urgency=medium
+
+  [ Yves-Alexis Perez ]
+  * New upstream stable release.
+
+  [ Unit 193 ]
+  * d/control:
+    - Remove duplicated 'section' field.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 04 Sep 2017 13:38:20 +0200
+
+tumbler (0.1.92.1-1) experimental; urgency=medium
+
+  [ Yves-Alexis Perez ]
+  * New upstream development release.
+  * debian/control:
+    - update standards version to 4.0.0.
+  * Run wrap-and-sort.
+
+  [ Unit 193 ]
+  * d/control:
+    - Drop libtumbler-1-dbg.
+    - Drop build-dep on libdbus-glib-1-dev, gdbus is now used.
+  * d/rules:
+    - Migrate to dbgsym packages.
+  * d/tumbler.install:
+    - Install the new tumbler-desktop-thumbnailer.so plugin.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 24 Jun 2017 14:14:26 +0200
+
+tumbler (0.1.32-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches:
+    - 01_fix-typo-tumbler-rc removed, included upstream.
+  * debian/control:
+    - update standards version to 3.9.8.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Jun 2017 15:38:22 +0200
+
+tumbler (0.1.31-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 06 May 2015 18:12:00 +0200
+
+tumbler (0.1.31-1) experimental; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release
+
+  [ Mateusz Łukasik ]
+  * Bump standards-version to 3.9.6
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 08 Mar 2015 21:55:02 +0100
+
+tumbler (0.1.30-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release
+  * debian/rules: Disable silent rules
+  * debian/control: Bump standards-version to 3.9.5
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 09 Mar 2014 10:09:08 +0100
+
+tumbler (0.1.29-2) unstable; urgency=low
+
+  [ Evgeni Golov ]
+  * Correct Vcs-* URLs to point to anonscm.debian.org
+
+  [ Jackson Doak ]
+  * Bump standards-version to 3.9.4
+
+  [ Yves-Alexis Perez ]
+  * debian/patches:
+    - 01_fix-typo-tumbler-rc added, fix typo in /etc/xdg/tumbler/tumbler.rc
+      preventing video thumbnailing.                            closes: #723189
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 17 Sep 2013 21:56:37 +0200
+
+tumbler (0.1.29-1) unstable; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * New upstream release.
+  * debian/control:
+    - update gstreamer build-dep to libgstreamer1.0-dev and
+      libgstreamer-plugins-base1.0-dev.
+  * debian/rules:
+    - enable all hardening flags.
+
+  [ Lionel Le Folgoc ]
+  * New upstream release (0.1.27):
+    - re-enable all plugins since there's now a priority mechanism to choose
+      the preferred ones.
+  * debian/rules: drop --disable-ffmpeg-thumbnailer from configure.
+  * debian/control:
+    - readd libffmpegthumbnailer-dev to b-deps to build the ffmpeg thumbnailer
+      plugin.
+    - add libcurl4-gnutls-dev to b-deps to build the cover thumbnailer plugin
+    - update the long description of tumbler-plugins-extra to mention the new
+      plugins.
+  * debian/tumbler-plugins-extra.install: ship the new plugins.
+  * debian/tumbler-common.install: ship the new rc file.
+  * debian/libtumbler-1-0.symbols: updated for the new symbols.
+  * debian/copyright: refreshed.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 22 May 2013 00:27:44 +0200
+
+tumbler (0.1.25-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * New upstream release.
+
+  [ Yves-Alexis Perez ]
+  * debian/rules:
+    - build with --parallel.
+    - stop running xdt-autogen before configure, not needed anymore.
+  * debian/control:
+    - drop xfce4-dev-tools, libtool and gtk-doc-tools from build-deps.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sat, 05 May 2012 14:39:43 +0200
+
+tumbler (0.1.24-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    - 01_fix-link-lm and 02_fix-link-gmodule removed, included upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Thu, 29 Mar 2012 11:14:19 +0200
+
+tumbler (0.1.23-2) unstable; urgency=low
+
+  * debian/patches:
+    - 02_fix-link-gmodule added, fix FTBFS with glib 2.32.      closes: #665667
+  * debian/control:
+    - update standards version to 3.9.3.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 28 Mar 2012 11:37:50 +0200
+
+tumbler (0.1.23-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * New upstream release:
+    - fix crashes in the pixbuf thumbnailer.                        lp: #804921
+  * debian/control: build-depends on libgsf-1-dev and libopenrawgnome-dev to
+    enable the new thumbnailers.
+  * debian/copyright: fix EOLs.
+  * Add a new binary package, tumbler-plugins-extra, to ship plugins using
+    libraries not present in the default xfce desktop (openraw, gsf), and let
+    tumbler suggest it.
+  * debian/patches:
+    - 02_start-gst-pipeline.patch: dropped, applied upstream.
+    - 01_fix-link-lm.patch: refreshed for the new plugins.
+  * debian/libtumbler-1-dev.install: updated, .a files aren't created anymore.
+
+  [ Yves-Alexis Perez ]
+  * debian/watch updated for new tumbler location.
+  * debian/control:
+    - update debhelper build-dep to 9 now that it's released.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 05 Feb 2012 21:03:17 +0100
+
+tumbler (0.1.22-1) unstable; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * New upstream release:
+    - add new gstreamer-based video thumbnailer.
+  * debian/copyright: updated.
+  * debian/rules: disable the ffmpeg thumbnailer by default, upstream
+    recommends to use the new gstreamer one instead.
+  * debian/control: replace libffmpegthumbnailer-dev b-dep with
+    libgstreamer0.10-dev, and switch to libjpeg-dev.            closes: #644968
+  * debian/patches/02_start-gst-pipeline.patch: added, fix thumbnail generation.
+
+  [ Yves-Alexis Perez ]
+  * debian/rules:
+    - use hardening method from dpkg-dev 1.16.1 and debhelper 9.
+    - use multiarch dirs.
+  * debian/compat bumped to 9.
+  * debian/control:
+    - drop build-dep on hardening-includes
+    - add build-dep on dpkg-dev (>= 1.16.1)
+    - add Pre-Depends on misc:Pre-Depends
+  * debian/libtumbler-1-0.install, debian/libtumbler-1-dev.install,
+    debian/tumbler.install: use multiarch paths.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Fri, 14 Oct 2011 17:16:30 +0200
+
+tumbler (0.1.21-3) unstable; urgency=low
+
+  * debian/patches:
+    - 01_fix-link-lm added, add explicit link on -lm.           closes: #640453
+  * debian/control:
+    - add build-dep on xfce4-dev-tools, libtool and gtk-doc-tools.
+  * debian/rules:
+    - run xdt-autogen before configure.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 05 Sep 2011 21:33:31 +0200
+
+tumbler (0.1.21-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * debian/control:
+    - drop Emanuele, Simon and Mike from uploaders.
+    - update standards version to 3.9.2.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 19 Apr 2011 17:22:59 +0200
+
+tumbler (0.1.21-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 14 Feb 2011 23:46:05 +0100
+
+tumbler (0.1.6-1) experimental; urgency=low
+
+  * Initial release.                                            closes: #612110
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 07 Feb 2011 00:46:24 +0100

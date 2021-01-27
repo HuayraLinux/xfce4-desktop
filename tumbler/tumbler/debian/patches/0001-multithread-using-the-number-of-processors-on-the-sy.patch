@@ -1,0 +1,21 @@
+From: Yves-Alexis Perez <corsac@debian.org>
+Date: Fri, 23 Mar 2018 14:56:32 +0100
+Subject: multithread using the number of processors on the system
+
+---
+ tumblerd/tumbler-group-scheduler.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tumblerd/tumbler-group-scheduler.c b/tumblerd/tumbler-group-scheduler.c
+index c1a78c4..809577e 100644
+--- a/tumblerd/tumbler-group-scheduler.c
++++ b/tumblerd/tumbler-group-scheduler.c
+@@ -164,7 +164,7 @@ tumbler_group_scheduler_init (TumblerGroupScheduler *scheduler)
+ 
+   /* allocate a pool with one thread for all requests */
+   scheduler->pool = g_thread_pool_new (tumbler_group_scheduler_thread, 
+-                                       scheduler, 1, TRUE, NULL);
++                                       scheduler, g_get_num_processors(), TRUE, NULL);
+ 
+ }
+ 
