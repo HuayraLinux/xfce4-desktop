@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,-z,defs -Wl,--as-needed -Wl,-O1
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+override_dh_autoreconf:
+	mkdir -p m4
+	NOCONFIGURE=1 dh_autoreconf xdt-autogen
+
+override_dh_install:
+	find debian/xfce4-screenshooter/usr/lib -name '*.la' -delete
+	dh_install
+
+override_dh_shlibdeps:
+	dh_shlibdeps -X debian/xfce4-screenshooter/usr/lib/$(DEB_HOST_MULTIARCH)/xfce4/panel/plugins/libscreenshooterplugin.so -- -dRecommends debian/xfce4-screenshooter/usr/lib/$(DEB_HOST_MULTIARCH)/xfce4/panel/plugins/libscreenshooterplugin.so -dDepends
+
+%:
+	dh $@
