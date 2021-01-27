@@ -1,0 +1,45 @@
+Source: xfce4-clipman-plugin
+Section: xfce
+Priority: optional
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Uploaders: Matias De lellis <mati86dl@gmail.com>
+Build-Depends: debhelper (>= 10),
+               intltool,
+               libexo-2-dev,
+               libgtk-3-dev,
+               libqrencode-dev,
+               libx11-dev,
+               libxfce4panel-2.0-dev,
+               libxfce4ui-2-dev,
+               libxfce4util-dev,
+               libxfconf-0-dev,
+               libxml2-dev,
+               libxtst-dev,
+               pkg-config,
+               xfce4-dev-tools
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
+Homepage: http://goodies.xfce.org/
+Vcs-Git: https://salsa.debian.org/xfce-team/goodies/xfce4-clipman-plugin.git
+Vcs-Browser: https://salsa.debian.org/xfce-team/goodies/xfce4-clipman-plugin
+
+Package: xfce4-clipman
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: clipboard history utility
+ Clipman enables you to store and recall X selections, as well as GTK+
+ clipboard content. You can also define actions to be triggered by selecting
+ some text pattern.
+ .
+ This package uses Xfce libraries but can be used without the Xfce panel
+ and only requires a system tray (notification area).
+
+Package: xfce4-clipman-plugin
+Architecture: any
+Depends: xfce4-clipman, ${misc:Depends}, ${shlibs:Depends}
+Description: clipboard history plugin for Xfce panel
+ Clipman enables you to store and recall X selections, as well as GTK+
+ clipboard content. You can also define actions to be triggered by selecting
+ some text pattern.
+ .
+ This package contains the Xfce panel plugin.

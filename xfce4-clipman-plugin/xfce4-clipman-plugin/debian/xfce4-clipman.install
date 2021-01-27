@@ -1,0 +1,6 @@
+etc
+usr/bin
+usr/share/appdata/*	usr/share/appstream/
+usr/share/applications
+usr/share/icons
+usr/share/locale

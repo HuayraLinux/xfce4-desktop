@@ -1,0 +1,24 @@
+Index: xfce4-clipman-plugin-1.6.1/panel-plugin/xfce4-clipman-settings.c
+===================================================================
+--- xfce4-clipman-plugin-1.6.1.orig/panel-plugin/xfce4-clipman-settings.c
++++ xfce4-clipman-plugin-1.6.1/panel-plugin/xfce4-clipman-settings.c
+@@ -780,8 +780,8 @@ cb_regex_focus_in_event (GtkWidget *widg
+ {
+   GtkWidget *infobar = GTK_WIDGET (user_data);
+ 
+-  gtk_widget_show (infobar);
+-  gtk_info_bar_set_revealed (GTK_INFO_BAR (infobar), TRUE);
++  gtk_widget_show_all (infobar);
++  //gtk_info_bar_set_revealed (GTK_INFO_BAR (infobar), TRUE);
+ 
+   return FALSE;
+ }
+@@ -793,7 +793,7 @@ cb_regex_focus_out_event (GtkWidget *wid
+ {
+   GtkWidget *infobar = GTK_WIDGET (user_data);
+ 
+-  gtk_info_bar_set_revealed (GTK_INFO_BAR (infobar), FALSE);
++  //gtk_info_bar_set_revealed (GTK_INFO_BAR (infobar), FALSE);
+   gtk_widget_hide (infobar);
+ 
+   return FALSE;
