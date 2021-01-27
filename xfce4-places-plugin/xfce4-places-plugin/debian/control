@@ -1,0 +1,33 @@
+Source: xfce4-places-plugin
+Section: xfce
+Priority: optional
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Uploaders: Matias De lellis <mati86dl@gmail.com>
+Build-Depends: debhelper (>= 10),
+               intltool,
+               libexo-2-dev,
+               libgtk-3-dev,
+               libnotify-dev,
+               libx11-dev,
+               libxfce4panel-2.0-dev,
+               libxfce4ui-2-dev (>= 4.13),
+               libxfce4util-dev,
+               libxfconf-0-dev,
+               pkg-config,
+               xfce4-dev-tools
+Standards-Version: 4.4.0
+Homepage: https://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin
+Vcs-Git: https://salsa.debian.org/xfce-team/goodies/xfce4-places-plugin.git
+Vcs-Browser: https://salsa.debian.org/xfce-team/goodies/xfce4-places-plugin
+
+Package: xfce4-places-plugin
+Architecture: any
+Depends: thunar, ${misc:Depends}, ${shlibs:Depends}
+Description: quick access to folders, documents and removable media
+ This plugin brings much of the functionality of GNOME’s Places menu to Xfce.
+ It puts a simple button on the panel. Clicking on this button opens up a menu
+ with 4 sections:
+  - System-defined directories (home folder, trash, desktop, file system)
+  - Removable media (using thunar-vfs)
+  - User-defined bookmarks (reads ~/.gtk-bookmarks)
+  - Recent documents submenu
