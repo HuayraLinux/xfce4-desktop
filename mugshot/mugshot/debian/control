@@ -1,0 +1,40 @@
+Source: mugshot
+Section: utils
+Priority: optional
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Uploaders: Matias De lellis <mati86dl@gmail.com>
+Build-Depends: debhelper (>= 10),
+               dh-python,
+               gir1.2-gtk-3.0,
+               python3,
+               python3-distutils-extra,
+               python3-gi,
+               python3-pexpect
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://github.com/bluesabre/mugshot
+Vcs-Git: https://salsa.debian.org/python-team/packages/mugshot.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/mugshot
+
+Package: mugshot
+Architecture: all
+Depends: accountsservice,
+         gir1.2-gdkpixbuf-2.0,
+         gir1.2-glib-2.0,
+         gir1.2-gst-plugins-base-1.0,
+         gir1.2-gstreamer-1.0,
+         gir1.2-gtk-3.0,
+         python3-cairo,
+         python3-gi,
+         python3-pexpect,
+         ${misc:Depends},
+         ${python3:Depends}
+Recommends: gir1.2-cheese-3.0, gir1.2-gtkclutter-1.0, gstreamer1.0-tools
+Suggests: gstreamer1.0-plugins-good
+Description: lightweight user-configuration application
+ Mugshot is a lightweight user configuration utility that allows you to
+ easily update personal user details. This includes:
+  - Linux profile image: ~/.face
+  - User details stored in /etc/passwd (used by finger)
+  - Pidgin buddy icon
+  - LibreOffice user details

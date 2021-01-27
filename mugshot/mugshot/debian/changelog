@@ -1,0 +1,189 @@
+mugshot (0.4.3-1~huayra4+1) torbellino; urgency=medium
+
+  * Rebuild for Huayra 4.
+
+ -- Matias De lellis <mati86dl@gmail.com>  Wed, 27 Jan 2021 10:28:19 -0300
+
+mugshot (0.4.3-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Sean Davis ]
+  * New upstream version 0.4.3. Closes: #976245
+  * d/control:
+    - Update standards version to 4.5.1, no changes needed.
+    - Remove python3-dbus dependency, no longer needed
+    - Bump debhelper-compat to 13
+  * d/watch: Bump to standard version 4
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Fri, 01 Jan 2021 16:06:20 -0800
+
+mugshot (0.4.2-1) unstable; urgency=medium
+
+  [ Sean Davis ]
+  * New upstream release.
+  * d/control, d/copyright, d/watch:
+    - New upstream homepage: https://github.com/bluesabre/mugshot
+  * d/copyright: Update mugshot copyrights
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sun, 04 Aug 2019 08:26:36 -0400
+
+mugshot (0.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix AttributeError at startup. Closes: #913000, #914025
+    - Fix TypeError at startup (LP: #1443283)
+    - Fix FileNotFoundError with profile images (LP: #1771629)
+  * d/control:
+    - Bump Standards-Version to 4.3.0, no changes needed
+  * d/copyright:
+    - Add CC0 license for data/metainfo/*
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Mon, 11 Feb 2019 06:45:40 -0500
+
+mugshot (0.4.0-2) unstable; urgency=medium
+
+  [ Sean Davis ]
+  * d/control:
+    - Run wrap-and-sort
+    - Drop unneeded build-depend on python3-distutils
+    - Replace python3-gi build-depend with python-gi-dev
+    - Drop depend on unknown substitution variable ${shlibs:Depends}
+    - Bump Standards-Version to 4.1.5, no changes needed.
+    - Set Rules-Requires-Root:no.
+    - Add depend on python3-gi. Closes: #902378
+  * d/rules:
+    - Disable verbose mode
+
+  [ Mattia Rizzolo ]
+  * Also change from python-gi-dev to python3-gi in the Build-Depends.
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Mon, 16 Jul 2018 23:34:26 -0400
+
+mugshot (0.4.0-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release (0.3.2)
+    - Fixes crash on image capture (LP: #1516237)
+  * debian/control:
+    - Add gstreamer1.0-tools to Recommends
+    - Bump debhelper requirement to 10
+  * debian/compat: Set to 10
+
+  [ Piotr Ożarowski ]
+  * debian/rules: remove duplicate NEWS file from the package
+
+  [ SVN-Git Migration ]
+  * debian/control:
+    - Update Vcs fields for git migration
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+  [ Sean Davis ]
+  * New upstream release (0.4.0)
+  * d/compat: Set to 11
+  * d/control:
+    - Bump debhelper requirement to 11
+    - Bump standards-version to 4.1.4
+    - Change section from python to utils
+  * d/copyright: Update relevant copyright dates
+  * d/watch, d/upstream:
+    - Check for upstream signature
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Wed, 18 Apr 2018 06:22:23 -0400
+
+mugshot (0.3.1-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Build-depend on dh-python and python3-distutils,
+    required after recent python3 packaging changes.
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 11 Apr 2018 08:58:48 +0300
+
+mugshot (0.3.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add the missing dependency on accountsservice. (Closes: #855157)
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 08 Apr 2018 15:46:42 +0300
+
+mugshot (0.3.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - Use cheese/clutter to display video feed and capture photos
+  * debian/control:
+    - Update depends/build-depends for new release
+    - Add missing build-depends so fix tests. Closes: #811323
+    - Bump standards-version to 3.9.8
+  * Delete debian/menu, we don't need it anymore
+  * debian/copyright: Update copyright length
+  * debian/rules: Fix typo in changelog override. Closes: #834652
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Sat, 27 Aug 2016 06:48:02 +1000
+
+mugshot (0.2.5-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix: mugshot fails to start for some users (LP: #1353530)
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 02 Sep 2014 17:10:26 +1000
+
+mugshot (0.2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix: Mugshot does not correctly expand user details (LP: #1310634)
+    - Fix: Remove hard dependency on AccountsService (LP: #1311938)
+  * debian/control: Remove accountsservice dependency
+  * debian/copyright: Update license to GPL3+
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sat, 02 Aug 2014 07:18:19 -0400
+
+mugshot (0.2.3-2) unstable; urgency=medium
+
+  * Add missing depend on accountsservice. (Closes: #745548)
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Mon, 02 Jun 2014 14:33:51 +1000
+
+mugshot (0.2.3-1) unstable; urgency=medium
+
+  * New upstream release. LP: #1302906
+    - fix: mugshot is unable to store profile picture (LP: #1298665)
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Sat, 05 Apr 2014 12:41:01 +1100
+
+mugshot (0.2.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - Fix crash with IndexError in init_user_details (LP: #1287468)
+  * Update d/watch
+  * debian/control: Add depends on gstreamer1.0-tools. LP: #1286487
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 12 Mar 2014 07:26:55 +1100
+
+mugshot (0.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 04 Mar 2014 16:58:55 +1100
+
+mugshot (0.2-1) unstable; urgency=low
+
+  * Initial release (closes: #721006)
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Mon, 27 Jan 2014 07:57:13 +1100
