@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed -Wl,-O1 -Wl,-z,defs
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+include /usr/share/dpkg/architecture.mk
+
+override_dh_install:
+	rm -rf debian/thunar-archive-plugin/usr/lib/$(DEB_HOST_MULTIARCH)/thunarx-3/*.la
+	dh_install
+
+override_dh_makeshlibs:
+	dh_makeshlibs -n -X /usr/lib/$(DEB_HOST_MULTIARCH)/thunarx-3/
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+%:
+	dh $@

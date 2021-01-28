@@ -1,0 +1,23 @@
+Source: thunar-archive-plugin
+Section: xfce
+Priority: optional
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Uploaders: Matias De lellis <mati86dl@gmail.com>
+Build-Depends: debhelper (>= 10),
+               intltool,
+               libexo-2-dev,
+               libthunarx-3-dev,
+               pkg-config,
+               xfce4-dev-tools
+Standards-Version: 4.2.1
+Vcs-Git: https://salsa.debian.org/xfce-team/goodies/thunar-archive-plugin.git
+Vcs-Browser: https://salsa.debian.org/xfce-team/goodies/thunar-archive-plugin
+
+Package: thunar-archive-plugin
+Architecture: any
+Depends: thunar (>= 0.5.0rc2-1), ${misc:Depends}, ${shlibs:Depends}
+Recommends: xarchiver (>= 0.3.9.2beta2-2 ) | ark | file-roller | engrampa
+Description: Archive plugin for Thunar file manager
+ This plugin allows one to extract and create archive from inside the Thunar
+ file manager. At the moment it uses file-roller but will use xarchiver in the
+ future.
