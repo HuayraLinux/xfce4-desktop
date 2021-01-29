@@ -1,1 +1,2 @@
 debian/defaults.rc	etc/xdg/xfce4/whiskermenu/
+debian/whiskermenu.desktop usr/share/xfce4/panel/plugins/
