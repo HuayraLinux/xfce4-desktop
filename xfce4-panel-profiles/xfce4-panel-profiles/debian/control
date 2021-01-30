@@ -1,0 +1,32 @@
+Source: xfce4-panel-profiles
+Section: xfce
+Priority: optional
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Build-Depends: debhelper (>= 10),
+               dh-python,
+               python3,
+               python3-distutils-extra (>= 2.18)
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
+Homepage: https://git.xfce.org/apps/xfce4-panel-profiles/about/
+
+Package: xfce4-panel-profiles
+Architecture: all
+Depends: gir1.2-glib-2.0,
+         gir1.2-gtk-3.0 (>= 3.12),
+         ${misc:Depends},
+         ${python3:Depends}
+Replaces: xfpanel-switch (<< 1.0.9~)
+Breaks: xfpanel-switch (<< 1.0.9~)
+Enhances: xfce4-panel
+Description: layout manager for the Xfce panel
+ Xfce Panel Profiles (xfce4-panel-profiles) is a simple application to
+ manage Xfce panel layouts. This tool makes it possible to backup,
+ restore, import, and export these panel layouts.
+
+Package: xfpanel-switch
+Depends: xfce4-panel-profiles, ${misc:Depends}
+Architecture: all
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
