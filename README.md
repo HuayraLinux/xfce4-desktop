@@ -56,4 +56,3 @@ Tenga en cuanta el orden de compilacion para cumplir las depenencias:
 * xfce4-settings: Temas por defecto.
 * xfwm4: libxres-dev
 * xfce4-clipman-plugin: fix-gtk_info_bar_set_revealed.patch
-* xfce4-whiskermenu-plugin: Falta .desktop
